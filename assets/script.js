@@ -21,15 +21,15 @@ scoreBtn.addEventListener("click", function highscore() {
     else {
 
         var weight1 = weight.value.trim();
-        weight1 = parseInt(weight1);
+        weight1 = parseFloat(weight1);
         var length1 = length.value.trim();
-        length1 = parseInt(length1);
+        length1 = parseFloat(length1);
         var width1 = width.value.trim();
-        width1 = parseInt(width1);
+        width1 = parseFloat(width1);
         var height1 = height.value.trim();
-        height1 = parseInt(height1);
+        height1 = parseFloat(height1);
         var price1 = price.value.trim();
-        price1 = parseInt(price1);
+        price1 = parseFloat(price1);
         var maxw = 0;
         var shipandtax = 0;
         var total = 0;
@@ -45,7 +45,7 @@ scoreBtn.addEventListener("click", function highscore() {
         var taxes = Math.round(0.16*(price1 + maxw));
         shipandtax = (shipping + taxes);
         if (shipandtax < 23) {
-            total = Math.round((price1 + 25));
+            total = Math.round((price1 + 23));
         }
         else {
             total = Math.round((price1 + shipping + taxes));
